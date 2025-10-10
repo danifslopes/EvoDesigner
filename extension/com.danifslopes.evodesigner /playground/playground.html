@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/topcoat-desktop-dark.min.css" />
+    <link id="hostStyle" rel="stylesheet" href="../css/styles.css" />
+    <title>Co-Des Playground</title>
+    <script>
+        /* This script uses cep_node to start the Node.js server located at '/server/server.js' */
+        //var localServer = cep_node.require(__dirname + '/server/server.js')();
+    </script>
+
+</head>
+
+<body class="hostElt">
+
+    <div id="loader">
+        <span>Getting everything ready for you! Just a sec...</span>
+    </div>
+
+    <div id="content">
+        <!--Concept-->
+        <div class="section">
+            <h6 class="title">Concept:<br>
+                <i>Type keywords to find related edition tools!<br>Each tool will be assined a relation value.</i>
+            </h6>
+            <div class="sectioncont">
+
+                <div class="labelinput baseline">
+                    <p class="label">Keywords: </p>
+                    <div class="inputlistitem block">
+                        <input id="keywords" type="text" class="topcoat-text-input input" maxlength="50">
+                        <span id="current_keywords" class="note"></span>
+                        <span id="keywords_tip" class="note"></span>
+                    </div>
+                </div>
+
+               <!--not implemented yet <div class="labelinput baseline">
+                    <p class="label">Focus on ideias:</p>
+                    <input id="propertiesExponent" type="number" class="input topcoat-text-input shortinput" value="3"
+                        min="1" max="5" step="1">
+                    <label class="note">&nbsp;(focus on the most related visual solutions)</label>
+                </div>
+                -->
+
+                <div class="labelinput">
+                    <p class="label">Algorithm:</p>
+
+                    <div class="inputcombo radiodiv" id="conceptAlgorithm">
+                        <input id="ConceptNet" type="radio" name="conceptAlgorithm" value="ConceptNet" class="radio-button" checked>
+                        <p>ConceptNet</p>
+                        <input id="GPT" type="radio" name="conceptAlgorithm" value="GPT" class="radio-button">
+                        <p>GPT</p>
+                    </div>
+                </div>
+
+                <button id="learn_keywords" class="topcoat-button gobtn" active="false">Learn keywords</button>
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Crossover pages: </p>
+                    <input id="pag_to_cross_1" type="number" class="input topcoat-text-input shortinput" placeholder="1"
+                        value="1"> +
+                    <input id="pag_to_cross_2" type="number" class="input topcoat-text-input shortinput" placeholder="2"
+                        value="2">
+                    <button id="auto_cross" class="topcoat-button reg_btn">Crossover</button>
+                </div>-->
+
+            </div>
+        </div>
+
+        <!--Manual Exploration-->
+        <div class="section">
+            <h6 class="title">Manual Exploration:<br>
+                <i>Click once and again to explore surprising solutions!</i>
+            </h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Document:<br>
+                        <span class="note">
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="docMethods">
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Page:<br>
+                        <span class="note">
+                            1st, fly to a page and click it
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="pageMethods">
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Items:<br>
+                        <span class="note">
+                            1st, select items<br>to co-design
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="pageItemMethods">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Auto Exploration-->
+        <div class="section">
+            <h6 class="title">Auto Exploration:<br>
+                <i>Auto stylise pages using the set keywords<br>(or otherwise randomness)!</i>
+            </h6>
+            <div class="sectioncont">
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Keywords: </p>
+                    <div class="inputlistitem block">
+                        <input id="keywords" type="text" class="topcoat-text-input input">
+                        <span class="note">
+                            Used to pick apropriate edition methods.
+                        </span>
+                        <button jsx="init()" class="topcoat-button inlineBtn noMargin">Learn keywords</button>
+                    </div>
+                </div>-->
+
+                <div class="labelinput baseline">
+                    <p class="label">Prob. of each item change:</p>
+                    <input id="mutprob" type="number" class="input topcoat-text-input shortinput" value="100" min="1"
+                        max="100" step="5">
+                    <label class="note">&nbsp;% (used if there's no selected items) </label>
+                </div>
+
+                <div class="labelinput baseline">
+                    <p class="label">Nº pags to create: </p>
+                    <input id="numpages" type="number" class="input topcoat-text-input shortinput" value="10" min="1"
+                        max="30" step="1">
+                    <label class="note">&nbsp;(the original page will not be changed)</label>
+                </div>
+
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Mandatory tools: </p>
+                    <div class="inputlistitem block">
+                        <div id="mandatory" type="cards" class="topcoat-text-input input">
+                            <div>Fill Color</div>
+                            <div>Text Color</div>
+                        </div>
+                        <span class="note">
+                            These tools will be always used to stylise the page items. The remaining may or may not be used.
+                        </span>
+                    </div>
+                </div>-->
+
+                <div class="labelinput baseline">
+                    <p class="label">Mandatory tools: </p>
+                    <div class="inputlistitem block">
+                        <button id="mandatory_tools" class="topcoat-button dropcheckboxlist hasop">
+                            ( no tools selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            Selected tools will always be used to stylise the page items. The remaining may or may not
+                            be used.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="labelinput baseline">
+                    <p class="label">Mand. properties: </p>
+                    <div class="inputlistitem block">
+                        <button id="mandatory_props" class="topcoat-button dropcheckboxlist hasop">
+                            ( no properties selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            The selected properties will always be picked if the respective tools are used.
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <button id="auto_mutate" class="topcoat-button gobtn">Auto-Stylise</button>
+
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Crossover pages: </p>
+                    <input id="pag_to_cross_1" type="number" class="input topcoat-text-input shortinput" placeholder="1"
+                        value="1"> +
+                    <input id="pag_to_cross_2" type="number" class="input topcoat-text-input shortinput" placeholder="2"
+                        value="2">
+                    <button id="auto_cross" class="topcoat-button reg_btn">Crossover</button>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+
+    <div id="log">
+        <h6 class="title">Live Feedback:</h6>
+        <div id="logtxt">
+            <div id='pastLog'></div>
+            <div id='newLog'>
+                Here I will text you some feedback on what I'm doing! ;)
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown"></div>
+
+    <!--<script src="../js/libs/seedrandom.js"></script>
+    <script>
+        Math.seedrandom("d18")
+    </script>-->
+
+    <script src="../js/libs/jquery-2.0.2.min.js"></script>
+    <script src="../js/libs/themeManager.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>-->
+    <script src="../js/libs/CSInterface.js"></script>
+    <script src="../js/userInterface.js"></script>
+    <script src="playground.js"></script>
+
+</body>
+
+</html>

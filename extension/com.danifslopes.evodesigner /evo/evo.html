@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/topcoat-desktop-dark.min.css" />
+    <link id="hostStyle" rel="stylesheet" href="../css/styles.css" />
+    <title>Evo Co-des</title>
+   <!--<script src="../js/libs/seedrandom.js"></script>-->
+    <script>
+        //Math.seedrandom("d18")
+        /* This script uses cep_node to start the Node.js server located at '/server/server.js' */
+        var localServer = cep_node.require(__dirname + '/server/server.js');
+    </script>
+</head>
+
+<body class="hostElt">
+
+    <div id="loader">
+        <span>Getting everything ready for you! Just a sec...</span>
+    </div>
+
+    <div id="content">
+
+        <div class="section">
+            <h6 class="title"><i>Let Evo Co-des explore and suggest surprising visual solutions automaticaly! Just set
+                    up your needs!</i></h6>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Population:</h6>
+            <div class="sectioncont">
+                <div class="labelinput">
+                    <p class="label">Pages to evolve: </p>
+                    <div class="inputlistitem block">
+                        <input id="selected_basePages_str" type="text" class="input topcoat-text-input"
+                            placeholder="ex: 1-5, 7 (up to pop. size)" value="">
+                        <span class="note">
+                            The page number of the page you want Co-des to work out. Set up multiple pages by
+                            separating page numbers with commas (exponentially slower).
+                        </span>
+                    </div>
+                </div>
+                <div class="labelinput">
+                    <p class="label">Population size: </p>
+                    <div class="inputlistitem block">
+                        <input id="pop_size" type="number" class="input topcoat-text-input shortinput" placeholder="10"
+                            value="10">
+                        <span class="note">
+                            Number of page-experiments will be created at a time. Co-des will look at those, chose the
+                            best
+                            ones and continue working from there until it finds a solution that fits our needs. Tip:
+                            Just
+                            leave it 10 if you're not sure what this means.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Conceptual rules:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput baseline">
+                    <p class="label">Keywords: </p>
+                    <div class="inputlistitem block">
+                        <input id="keywords" type="text" class="topcoat-text-input input" maxlength="50">
+                        <span id="current_keywords" class="note"></span>
+                        <span id="keywords_tip" class="note"></span>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Algorithm:</p>
+
+                    <div class="inputcombo radiodiv" id="conceptAlgorithm">
+                        <input id="ConceptNet" type="radio" name="conceptAlgorithm" value="ConceptNet" class="radio-button">
+                        <p>ConceptNet</p>
+                        <input id="GPT" type="radio" name="conceptAlgorithm" value="GPT" class="radio-button">
+                        <p>GPT</p>
+                    </div>
+                </div>
+
+                <button id="learn_keywords" class="topcoat-button gobtn" active="false">Learn keywords</button>
+
+                <!--To delete-->
+                <!--<div class="labelinput">
+                    <p class="label">Keywords: </p>
+                    <div class="inputlistitem block">
+                        <input id="keywords" type="text" class="topcoat-text-input input" maxlength="50">
+                        <span id="keywords_tip" class="note">Type some keywords to drive visuals choices, or just leave
+                            it
+                            empty for a broader range of solutions.</span>
+                    </div>
+                </div>-->
+
+                <div class="labelinput baseline">
+                    <p class="label">Mandatory tools: </p>
+                    <div class="inputlistitem block">
+                        <button id="mandatory_tools" class="topcoat-button dropcheckboxlist hasop">
+                            ( no tools selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            The selected tools will always be used to stylise the page items. The remaining may or may
+                            not
+                            be used.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="labelinput baseline">
+                    <p class="label">Mand. properties: </p>
+                    <div class="inputlistitem block">
+                        <button id="mandatory_props" class="topcoat-button dropcheckboxlist hasop">
+                            ( no properties selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            The selected properties will always be picked if the respective tools are used.
+                        </span>
+                    </div>
+                </div>
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Desirable tools: </p>
+                    <div class="inputlistitem block">
+                        <button id="desirable_tools" class="topcoat-button dropcheckboxlist hasop">
+                            ( no tools selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            The selected tools will be used more frequently.
+
+                        </span>
+                    </div>
+                </div>-->
+
+                <div class="labelinput baseline">
+                    <p class="label">Mand. pag. items: </p>
+                    <div class="inputlistitem block">
+                        <button id="mand_elms" class="topcoat-button dropcheckboxlist hasop">
+                            ( no items selected )
+                            <op>&nbsp;▾ </op>
+                        </button>
+                        <span class="note">
+                            The selected items will always be on page. The remaining may or may not be used.
+                        </span>
+                        <note id="add_mand_elms" class="noteBtn">
+                            Add page-selections
+                        </note>
+                        <note id="clear_mand_elms" class="noteBtn">
+                            Clear mandatory items
+                        </note>
+                    </div>
+                </div>
+
+                <!--<div class="labelinput">
+                    <p class="label">Mand. elements: </p>
+                    <input id="mand_elms" type="text" class="topcoat-text-input input"><br>
+                </div>-->
+
+                <!--<div class="labelinput">
+                    <p class="label">Hierarchy:</p>
+
+                    <div id="hierarchy" class="inputlist">
+                        <div class="inputlistcont">
+
+                            <div class="inputlistitem">
+                                <p class="sublabel">1º</p>
+                                <input type="text" class="topcoat-text-input input"
+                                    placeholder="Click here, then select page elements">
+                                <button class="addremove removeLevel hide">-</button> <br>
+                            </div>
+                            <div class="inputlistitem">
+                                <p class="sublabel">2º</p>
+                                <input type="text" class="topcoat-text-input input"
+                                    placeholder="Click here, then select page elements">
+                                <button class="addremove removeLevel">-</button><br>
+                            </div>
+
+                        </div>
+
+                        <p class="sublabel"></p>
+                        <button class="addremove addLevel">+</button>
+                        <label class="note addLevel">Add another level</label>
+
+                    </div>
+
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Evaluation rules:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <div class="label"></div>
+                    <p class="note">Level of importance of each rule:</p>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <!--<input id="noveltyOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>-->
+                        <p class="sliderlabel">Novelty:</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="noveltyValueRange" type="range" class="inputcomboslider topcoat-range" min="0"
+                            max="100" step="5">
+                        <input id="noveltyValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <!--<input id="balanceOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>-->
+                        <p class="sliderlabel">Balance:</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="balanceValueRange" type="range" class="inputcomboslider topcoat-range" min="0"
+                            max="100" step="5">
+                        <input id="balanceValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <!--<input id="legibilityOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>-->
+                        <p class="sliderlabel">Legibility:</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="legibilityValueRange" type="range" class="inputcomboslider topcoat-range" min="0"
+                            max="100" step="5">
+                        <input id="legibilityValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <!--<div class="labelinput">
+                    <div class="labelcombo label">
+                        <input id="styleOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>
+                        <p class="sliderlabel">Style</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="styleValueRange" type="range" class="inputcomboslider topcoat-range" min="0"
+                            max="100" step="5">
+                        <input id="styleValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Style classifier: </p>
+                    <input id="style_classifier" type="text" class="topcoat-text-input input"
+                        value="evodesigner.com/style/mystyle"><br>
+                    <p id="search_classifier" class="note"><a href="#">Find one</a></p>
+                </div>-->
+
+                <!--<div class="labelinput">
+                    <p class="label">Style classifier:</p>
+
+                    <select type="text" class="topcoat-text-input input">
+                        <option>evodesigner.com/style/mystyle</option>
+                    </select>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Algorithm settings:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Algorithm:</p>
+
+                    <div class="inputcombo radiodiv" id="algorithm">
+                        <input id="climber" type="radio" name="algorithm" value="climber" class="radio-button">
+                        <p>Hill Climber</p>
+                        <input id="genetic" type="radio" name="algorithm" value="genetic" class="radio-button">
+                        <p>Genetic</p>
+                    </div>
+                </div>
+
+                <!--
+                <div class="labelinput" >
+                    <p class="label">Variation:</p>
+
+                    <div class="inputcombo radiodiv" id="variation">
+                        <input id="mutation" type="radio" name="variation" value="mutation" class="radio-button">
+                        <p>Mutation</p>
+                        <input id="crossover" type="radio" name="variation" value="crossover" class="radio-button">
+                        <p>Mutation and Crossover</p>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Generation:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Nº. generations: </p>
+                    <input id="max_num_gens" type="number" value="10" class="topcoat-text-input input shortinput"><br>
+                </div>
+
+                <button id="generatebtn" class="topcoat-button gobtn">Generate</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="log">
+        <h6 class="title">Live Feedback:</h6>
+        <div id="logtxt">
+            <div id='pastLog'></div>
+            <div id='newLog'>
+                Here I will text you some feedback on what I'm doing! ;)
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown"></div>
+
+    <script src="../js/libs/jquery-2.0.2.min.js"></script>
+    <script src="../js/libs/themeManager.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>
+    <script src="../js/libs/CSInterface.js"></script>
+    <script src="../js/userInterface.js"></script>
+    <script src="evo_userInterface.js"></script>
+    <script src="evo.js"></script>
+
+</body>
+
+</html>

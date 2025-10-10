@@ -1,0 +1,460 @@
+/*#content, #log {
+    display: none;
+}*/
+
+/*Your styles*/
+
+* {
+    font-size: 11.5px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: none;
+    width: calc(100vw - 20px);
+}
+
+body {
+    margin: 10px;
+    color: whitesmoke;
+}
+
+button {
+    /* color: whitesmoke;*/
+}
+
+button op {
+    display: inline-block;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    padding-right: 4px;
+    /*margin-left: 4px;*/
+    /*border-left: 1px solid gray;*/
+}
+
+button[active=false] {
+    pointer-events: none;
+    opacity: 0.25;
+}
+
+.clickable_text:active,
+.sub:active {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.hasop {
+    width: fit-content;
+}
+
+
+
+.block>.hasop {
+    margin-top: 8px;
+}
+
+#mandatory op {
+    pointer-events: none;
+}
+
+#content {
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle;
+    width: 100%;
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+prob {
+    display: none;
+    opacity: 0.5;
+    margin-left: 4px;
+}
+
+.displatInlineBlock {
+    display: inline-block;
+}
+
+note {
+    margin-bottom: 4px;
+    opacity: 0.5;
+}
+
+#btn_test {
+    width: 100%;
+}
+
+.title {
+    font-size: 11.5px;
+    /*border-bottom: 1px solid rgb(66, 66, 66);*/
+    border-top: 1px solid rgb(66, 66, 66);
+    font-weight: bold;
+    display: block;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin: 0%;
+    color: rgb(121, 121, 121);
+}
+
+p,
+clabel:not(.checkboxandlabel label) {
+    font-size: 11.5px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.input[type=text],
+.input[type=number] {
+    margin-top: 8px;
+    padding-right: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 20px;
+}
+
+.input[type=cards] {
+    display: flex;
+    align-items: center;
+    height: 24px;
+}
+
+.input[type=cards] div {
+    background: #595b5b;
+    width: fit-content;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.section:first-of-type .title {
+    border: none;
+    padding-top: 0;
+}
+
+.sectioncont {
+    margin: 0;
+    padding: 0;
+}
+
+.labelinput {
+    display: flex;
+    width: 100%;
+}
+
+.baseline {
+    align-items: baseline;
+}
+
+.label {
+    position: relative;
+    width: 25%;
+    margin-right: 10px;
+}
+
+.input {
+    position: relative;
+    width: auto;
+    flex-grow: 1;
+}
+
+.sublabel {
+    margin-right: 10px;
+}
+
+.addremove {
+    margin: 12px 0 0 8px;
+    width: 12px;
+    height: 12px;
+    background: none;
+    border-color: rgb(121, 121, 121);
+    color: rgb(121, 121, 121);
+    line-height: 0px;
+    padding: 0;
+}
+
+.inputlist {
+    position: relative;
+    flex-grow: 1;
+}
+
+.block {
+    flex-direction: column;
+}
+
+.inputlistitem {
+    display: flex;
+    width: 75%;
+}
+
+.note {
+    color: rgb(121, 121, 121);
+    margin: 0;
+    display: block;
+}
+
+.sliderlabel {
+    margin-top: 0;
+}
+
+.inputcombo {
+    display: flex;
+    align-items: center;
+}
+
+.labelcombo {
+    margin-top: 8px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.labelcombo .topcoat-checkbox__checkmark {
+    margin-right: 10px;
+}
+
+.checkboxandlabel {
+    margin-bottom: 4px;
+}
+
+.checkboxandlabel label {
+    margin-left: 4px;
+}
+
+.sliderPerc {
+    width: 45px;
+}
+
+input[type=range] {
+    flex-grow: 1;
+    margin-top: 8px;
+    margin-right: 10px;
+    width: 210px;
+}
+
+.gobtn {
+    margin-top: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.shortinput {
+    width: 50px;
+    flex-grow: 0;
+}
+
+#search_classifier {
+    margin-top: 11px;
+    margin-left: 8px;
+    margin-right: 3px;
+}
+
+a {
+    color: inherit
+}
+
+.hide {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+[class^="btns"] {
+    /*background-color: rgb(60 60 60);*/
+    /*border-top: 1px solid rgb(101 101 101);*/
+    width: 75%;
+    overflow-y: scroll;
+    min-height: 50px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+[class^="btns"] span,
+[class^="btns"] label {
+    display: block;
+}
+
+button {
+    height: 2rem;
+}
+
+[class^="btns"] span,
+[class^="btns"] label {
+    margin-top: 8px;
+    text-transform: capitalize;
+}
+
+.reg_btn,
+[class^="btns"] button,
+.inlineBtn {
+    margin: 0;
+    width: fit-content;
+}
+
+[class^="btns"] button:not(btnandop button) {
+    margin-right: 4px;
+}
+
+.inlineBtn:not(.noMargin) {
+    margin-left: 4px;
+}
+
+#loader {
+    /*background: rgba(0, 0, 0, 0.75);*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#dropdown {
+    max-height: 40vh;
+    overflow-y: auto;
+    background-color: rgb(60, 60, 60);
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px 0px #00000061;
+}
+
+#dropdown span:not(:last-of-type),
+#dropdown label:not(:last-of-type) {
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+#log {
+    position: fixed;
+    height: 70px;
+    width: calc(100% - 20px);
+    bottom: 10px;
+    box-sizing: border-box;
+    color: #c6c8c8;
+    font-size: 12px;
+}
+
+#pastLog {
+    color: rgb(121, 121, 121);
+    /*margin-bottom: 6px;*/
+}
+
+#pastLog:empty {
+    display: none;
+}
+
+#newLog {
+    color: #c6c8c8;
+}
+
+#logtxt {
+    overflow: auto;
+    height: 40px;
+}
+
+
+/*
+Those classes will be edited at runtime with values specified
+by the settings of the CC application
+*/
+.hostFontColor {}
+
+.hostFontFamily {}
+
+.hostFontSize {}
+
+/*font family, color and size*/
+.hostFont {}
+
+/*background color*/
+.hostBgd {}
+
+/*lighter background color*/
+.hostBgdLight {}
+
+/*darker background color*/
+.hostBgdDark {}
+
+/*background color and font*/
+.hostElt {}
+
+
+.hostButton {
+    border: 1px solid;
+    border-radius: 2px;
+    height: 20px;
+    vertical-align: bottom;
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+
+btnandop .op {
+    height: 23px;
+    border-left: none;
+    border-radius: 0px 4px 4px 0px;
+}
+
+btnandop {
+    margin-right: 4px;
+    margin-top: 4px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+btnandop button {
+    margin: 0;
+}
+
+btnandop .manual-mutate {
+    height: 23px;
+}
+
+btnandop .manual-mutate.hasop {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.noteBtn {
+    text-decoration: underline;
+}
+
+#clear_mand_elms {
+    display: none;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(121, 121, 121);
+    border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar {
+    max-width: 5px;
+    background: none;
+}

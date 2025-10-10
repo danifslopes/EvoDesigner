@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.danifslopes.evodesigner" ExtensionBundleVersion="1.0.0"
+	ExtensionBundleName="EvoDesigner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ExtensionList>
+		<Extension Id="com.danifslopes.evodesigner.evo" Version="1.0.0" />
+		<Extension Id="com.danifslopes.evodesigner.playground" Version="1.0.0" />
+		<Extension Id="com.danifslopes.evodesigner.server" Version="1.0.0" />
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<!-- Uncomment tags according to the apps you want your panel to support 
+			Make sure to change these tags to use realistic version ranges before releasing your extensions, not 99.9!
+			You may also need to change the CEP version in order to support certain apps. -->
+
+			<!-- InDesign -->
+			<Host Name="IDSN" Version="[10.0,99.9]" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="7.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+	<DispatchInfoList>
+
+		<Extension Id="com.danifslopes.evodesigner.evo">
+			<DispatchInfo>
+				<Resources>
+					<MainPath>./evo/evo.html</MainPath>
+					<ScriptPath>./evo/evo.jsx</ScriptPath>
+
+					<CEFCommandLine>
+						<Parameter>--enable-nodejs</Parameter>
+						<Parameter>--mixed-context</Parameter>
+					</CEFCommandLine>
+
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>Evo Co-Des</Menu>
+					<Geometry>
+						<Size>
+							<Height>300</Height>
+							<Width>300</Width>
+						</Size>
+						<MinSize>
+							<Height>300</Height>
+							<Width>400</Width>
+						</MinSize>
+						<MaxSize>
+							<Height>1000</Height>
+							<Width>400</Width>
+						</MaxSize>
+					</Geometry>
+					<Icons>
+						<Icon Type="Normal">./icons/iconNormal.png</Icon>
+						<Icon Type="RollOver">./icons/iconRollover.png</Icon>
+						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+					</Icons>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+
+		<Extension Id="com.danifslopes.evodesigner.playground">
+			<DispatchInfo>
+				<Resources>
+					<MainPath>./playground/playground.html</MainPath>
+					<ScriptPath>./playground/playground.jsx</ScriptPath>
+
+					<CEFCommandLine>
+						<Parameter>--enable-nodejs</Parameter>
+						<Parameter>--mixed-context</Parameter>
+					</CEFCommandLine>
+
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>Co-Des Playground</Menu>
+					<Geometry>
+						<Size>
+							<Height>300</Height>
+							<Width>300</Width>
+						</Size>
+						<MinSize>
+							<Height>300</Height>
+							<Width>400</Width>
+						</MinSize>
+						<MaxSize>
+							<Height>1000</Height>
+							<Width>400</Width>
+						</MaxSize>
+					</Geometry>
+					<Icons>
+						<Icon Type="Normal">./icons/iconNormal.png</Icon>
+						<Icon Type="RollOver">./icons/iconRollover.png</Icon>
+						<Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+						<Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+						<Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+					</Icons>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+
+
+	</DispatchInfoList>
+</ExtensionManifest>
