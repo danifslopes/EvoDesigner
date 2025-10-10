@@ -1,0 +1,7 @@
+POST http://localhost:9003/similarity_gpt
+Content-Type: application/json
+
+{
+  "labels": ["crop", "resize", "filter"],
+  "keywords": ["Artificial Intelligence Bias"]
+}
