@@ -1,0 +1,785 @@
+
+New child
+P1 51 P2 29
+crossover done
+mutation done
+New child
+P1 41 P2 23
+crossover done
+mutation done
+New child
+P1 55 P2 24
+crossover done
+mutation done
+New child
+P1 27 P2 31
+crossover done
+mutation done
+New child
+P1 37 P2 35
+crossover done
+mutation done
+New child
+P1 27 P2 63
+crossover done
+mutation done
+New child
+P1 21 P2 62
+crossover done
+mutation done
+New child
+P1 54 P2 36
+crossover done
+mutation done
+New child
+P1 27 P2 37
+crossover done
+mutation done
+New child
+P1 55 P2 60
+crossover done
+mutation done
+New child
+P1 43 P2 18
+crossover done
+mutation done
+New child
+P1 50 P2 54
+crossover done
+mutation done
+New child
+P1 57 P2 19
+crossover done
+mutation done
+New child
+P1 53 P2 22
+crossover done
+mutation done
+New child
+P1 61 P2 52
+crossover done
+mutation done
+New child
+P1 20 P2 53
+crossover done
+mutation done
+New child
+P1 34 P2 35
+crossover done
+mutation done
+New child
+P1 45 P2 44
+crossover done
+mutation done
+New child
+P1 58 P2 52
+crossover done
+mutation done
+New child
+P1 27 P2 44
+crossover done
+mutation done
+New child
+P1 27 P2 44
+crossover done
+mutation done
+New child
+P1 38 P2 58
+crossover done
+mutation done
+New child
+P1 52 P2 41
+crossover done
+mutation done
+New child
+P1 24 P2 20
+crossover done
+mutation done
+New child
+P1 44 P2 32
+crossover done
+mutation done
+New child
+P1 44 P2 38
+crossover done
+mutation done
+New child
+P1 31 P2 27
+crossover done
+mutation done
+New child
+P1 47 P2 54
+crossover done
+mutation done
+New child
+P1 62 P2 49
+crossover done
+mutation done
+New child
+P1 18 P2 44
+crossover done
+mutation done
+New child
+P1 33 P2 43
+crossover done
+mutation done
+New child
+P1 33 P2 53
+crossover done
+mutation done
+New child
+P1 24 P2 56
+crossover done
+mutation done
+New child
+P1 56 P2 33
+crossover done
+mutation done
+New child
+P1 23 P2 40
+crossover done
+mutation done
+New child
+P1 18 P2 51
+crossover done
+mutation done
+New child
+P1 58 P2 54
+crossover done
+mutation done
+New child
+P1 54 P2 55
+crossover done
+mutation done
+New child
+P1 57 P2 39
+crossover done
+mutation done
+New child
+P1 37 P2 28
+crossover done
+mutation done
+New child
+P1 50 P2 38
+crossover done
+mutation done
+New child
+P1 52 P2 38
+crossover done
+mutation done
+New child
+P1 57 P2 18
+crossover done
+mutation done
+New child
+P1 36 P2 63
+crossover done
+mutation done
+New child
+P1 23 P2 43
+crossover done
+mutation done
+New child
+P1 45 P2 35
+crossover done
+mutation done
+New child
+P1 65 P2 51
+crossover done
+mutation done
+New child
+P1 41 P2 33
+crossover done
+mutation done
+New child
+P1 53 P2 34
+crossover done
+mutation done
+New child
+P1 20 P2 31
+crossover done
+mutation done
+New child
+P1 20 P2 65
+crossover done
+mutation done
+New child
+P1 56 P2 24
+crossover done
+mutation done
+New child
+P1 39 P2 27
+crossover done
+mutation done
+New child
+P1 52 P2 49
+crossover done
+mutation done
+New child
+P1 40 P2 60
+crossover done
+mutation done
+New child
+P1 37 P2 26
+crossover done
+mutation done
+New child
+P1 20 P2 62
+crossover done
+mutation done
+New child
+P1 39 P2 20
+crossover done
+mutation done
+New child
+P1 18 P2 30
+crossover done
+mutation done
+New child
+P1 27 P2 36
+crossover done
+mutation done
+New child
+P1 65 P2 30
+crossover done
+mutation done
+New child
+P1 31 P2 42
+crossover done
+mutation done
+New child
+P1 26 P2 59
+crossover done
+mutation done
+New child
+P1 46 P2 26
+crossover done
+mutation done
+New child
+P1 23 P2 52
+crossover done
+mutation done
+New child
+P1 51 P2 49
+crossover done
+mutation done
+New child
+P1 34 P2 59
+crossover done
+mutation done
+New child
+P1 66 P2 55
+crossover done
+mutation done
+New child
+P1 50 P2 52
+crossover done
+mutation done
+New child
+P1 21 P2 50
+crossover done
+mutation done
+New child
+P1 55 P2 49
+crossover done
+mutation done
+New child
+P1 60 P2 39
+crossover done
+mutation done
+New child
+P1 40 P2 50
+crossover done
+mutation done
+New child
+P1 53 P2 36
+crossover done
+mutation done
+New child
+P1 36 P2 60
+crossover done
+mutation done
+New child
+P1 27 P2 34
+crossover done
+mutation done
+New child
+P1 30 P2 46
+crossover done
+mutation done
+New child
+P1 56 P2 61
+crossover done
+mutation done
+New child
+P1 51 P2 20
+crossover done
+mutation done
+New child
+P1 24 P2 66
+crossover done
+mutation done
+New child
+P1 58 P2 45
+crossover done
+mutation done
+New child
+P1 51 P2 53
+crossover done
+mutation done
+New child
+P1 47 P2 27
+crossover done
+mutation done
+New child
+P1 55 P2 42
+crossover done
+mutation done
+New child
+P1 40 P2 42
+crossover done
+mutation done
+New child
+P1 52 P2 40
+crossover done
+mutation done
+New child
+P1 27 P2 52
+crossover done
+mutation done
+New child
+P1 26 P2 53
+crossover done
+mutation done
+New child
+P1 26 P2 44
+crossover done
+mutation done
+New child
+P1 27 P2 56
+crossover done
+mutation done
+New child
+P1 27 P2 54
+crossover done
+mutation done
+New child
+P1 18 P2 46
+crossover done
+mutation done
+New child
+P1 31 P2 51
+crossover done
+mutation done
+New child
+P1 39 P2 31
+crossover done
+mutation done
+New child
+P1 34 P2 55
+crossover done
+mutation done
+New child
+P1 24 P2 58
+crossover done
+mutation done
+New child
+P1 38 P2 36
+crossover done
+mutation done
+New child
+P1 46 P2 19
+crossover done
+mutation done
+New child
+P1 41 P2 32
+crossover done
+mutation done
+New child
+P1 36 P2 41
+crossover done
+mutation done
+New child
+P1 41 P2 31
+crossover done
+mutation done
+New child
+P1 33 P2 23
+crossover done
+mutation done
+New child
+P1 18 P2 23
+crossover done
+mutation done
+New child
+P1 38 P2 24
+crossover done
+mutation done
+New child
+P1 49 P2 36
+crossover done
+mutation done
+New child
+P1 60 P2 48
+crossover done
+mutation done
+New child
+P1 18 P2 43
+crossover done
+mutation done
+New child
+P1 66 P2 56
+crossover done
+mutation done
+New child
+P1 64 P2 49
+crossover done
+mutation done
+New child
+P1 49 P2 45
+crossover done
+mutation done
+New child
+P1 22 P2 49
+crossover done
+mutation done
+New child
+P1 29 P2 63
+crossover done
+mutation done
+New child
+P1 24 P2 21
+crossover done
+mutation done
+New child
+P1 56 P2 46
+crossover done
+mutation done
+New child
+P1 33 P2 45
+crossover done
+mutation done
+New child
+P1 56 P2 35
+crossover done
+mutation done
+New child
+P1 38 P2 41
+crossover done
+mutation done
+New child
+P1 25 P2 59
+crossover done
+mutation done
+New child
+P1 26 P2 61
+crossover done
+mutation done
+New child
+P1 63 P2 38
+crossover done
+mutation done
+New child
+P1 32 P2 36
+crossover done
+mutation done
+New child
+P1 48 P2 43
+crossover done
+mutation done
+New child
+P1 18 P2 28
+crossover done
+mutation done
+New child
+P1 38 P2 61
+crossover done
+mutation done
+New child
+P1 62 P2 26
+crossover done
+mutation done
+New child
+P1 20 P2 29
+crossover done
+mutation done
+New child
+P1 63 P2 22
+crossover done
+mutation done
+New child
+P1 25 P2 41
+crossover done
+mutation done
+New child
+P1 43 P2 60
+crossover done
+mutation done
+New child
+P1 36 P2 64
+crossover done
+mutation done
+New child
+P1 51 P2 60
+crossover done
+mutation done
+New child
+P1 64 P2 36
+crossover done
+mutation done
+New child
+P1 55 P2 63
+crossover done
+mutation done
+New child
+P1 25 P2 40
+crossover done
+mutation done
+New child
+P1 29 P2 36
+crossover done
+mutation done
+New child
+P1 38 P2 60
+crossover done
+mutation done
+New child
+P1 55 P2 23
+crossover done
+mutation done
+New child
+P1 56 P2 33
+crossover done
+mutation done
+New child
+P1 25 P2 43
+crossover done
+mutation done
+New child
+P1 63 P2 64
+crossover done
+mutation done
+New child
+P1 40 P2 57
+crossover done
+mutation done
+New child
+P1 49 P2 45
+crossover done
+mutation done
+New child
+P1 41 P2 56
+crossover done
+mutation done
+New child
+P1 33 P2 29
+crossover done
+mutation done
+New child
+P1 29 P2 60
+crossover done
+mutation done
+New child
+P1 21 P2 27
+crossover done
+mutation done
+New child
+P1 22 P2 63
+crossover done
+mutation done
+New child
+P1 28 P2 56
+crossover done
+mutation done
+New child
+P1 40 P2 19
+crossover done
+mutation done
+New child
+P1 52 P2 65
+crossover done
+mutation done
+New child
+P1 31 P2 46
+crossover done
+mutation done
+New child
+P1 19 P2 63
+crossover done
+mutation done
+New child
+P1 34 P2 18
+crossover done
+mutation done
+New child
+P1 26 P2 52
+crossover done
+mutation done
+New child
+P1 32 P2 23
+crossover done
+mutation done
+New child
+P1 54 P2 18
+crossover done
+mutation done
+New child
+P1 22 P2 19
+crossover done
+mutation done
+New child
+P1 20 P2 65
+crossover done
+mutation done
+New child
+P1 18 P2 51
+crossover done
+mutation done
+New child
+P1 30 P2 28
+crossover done
+mutation done
+New child
+P1 52 P2 42
+crossover done
+mutation done
+New child
+P1 42 P2 65
+crossover done
+mutation done
+New child
+P1 52 P2 44
+crossover done
+mutation done
+New child
+P1 59 P2 65
+crossover done
+mutation done
+New child
+P1 25 P2 34
+crossover done
+mutation done
+New child
+P1 67 P2 35
+crossover done
+mutation done
+New child
+P1 63 P2 58
+crossover done
+mutation done
+New child
+P1 62 P2 25
+crossover done
+mutation done
+New child
+P1 52 P2 64
+crossover done
+mutation done
+New child
+P1 36 P2 23
+crossover done
+mutation done
+New child
+P1 62 P2 19
+crossover done
+mutation done
+New child
+P1 52 P2 19
+crossover done
+mutation done
+New child
+P1 28 P2 67
+crossover done
+mutation done
+New child
+P1 58 P2 46
+crossover done
+mutation done
+New child
+P1 49 P2 25
+crossover done
+mutation done
+New child
+P1 35 P2 19
+crossover done
+mutation done
+New child
+P1 62 P2 63
+crossover done
+mutation done
+New child
+P1 28 P2 47
+crossover done
+mutation done
+New child
+P1 23 P2 62
+crossover done
+mutation done
+New child
+P1 33 P2 23
+crossover done
+mutation done
+New child
+P1 23 P2 32
+crossover done
+mutation done
+New child
+P1 26 P2 51
+crossover done
+mutation done
+New child
+P1 59 P2 45
+crossover done
+mutation done
+New child
+P1 42 P2 18
+crossover done
+mutation done
+New child
+P1 49 P2 62
+crossover done
+mutation done
+New child
+P1 52 P2 47
+crossover done
+mutation done
+New child
+P1 35 P2 41
+crossover done
+mutation done
+New child
+P1 26 P2 45
+crossover done
+mutation done
+New child
+P1 19 P2 59
+crossover done
+mutation done
+New child
+P1 65 P2 18
+crossover done
+mutation done
+New child
+P1 28 P2 58
+crossover done
+mutation done
+New child
+P1 29 P2 51
+crossover done
+mutation done
+New child
+P1 18 P2 47
+crossover done
+mutation done
+New child
+P1 67 P2 18
+crossover done
+mutation done
+New child
+P1 60 P2 26
+crossover done
+mutation done
+New child
+P1 59 P2 49
+crossover done
+mutation done

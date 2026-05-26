@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/topcoat-desktop-dark.min.css" />
+    <link id="hostStyle" rel="stylesheet" href="../css/styles.css" />
+    <title>eD Playground</title>
+    <script>
+        /* This script uses cep_node to start the Node.js server located at '/server/main.js' */
+        //var localServer = cep_node.require(__dirname + '/server/main.js')();
+    </script>
+
+</head>
+
+<body class="hostElt">
+
+    <div id="content">
+
+        <div class="section">
+            <h6 class="title">Auto Variation:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput baseline">
+                    <p class="label">Keywords: </p>
+                    <div class="inputlistitem block">
+                        <input id="keywords" type="text" class="topcoat-text-input input">
+                        <span class="note">
+                            Used to pick apropriate edition methods.
+                        </span>
+                        <button jsx="init()" class="topcoat-button inlineBtn noMargin">Initiate according to keywords</button>
+                    </div>
+                </div>
+
+                <div class="labelinput baseline">
+                    <p class="label">Mutate sel. page: </p>
+                    <label class="note">% items to mut.</label>&nbsp;
+                    <input id="mutprob" type="number" class="input topcoat-text-input shortinput" value="0.25" min="0"
+                        max="1" step="0.1">
+                    <button id="auto_mutate" class="topcoat-button inlineBtn">Mutate</button>
+                </div>
+
+                <!--<div class="labelinput baseline">
+                    <p class="label">Crossover pages: </p>
+                    <input id="pag_to_cross_1" type="number" class="input topcoat-text-input shortinput" placeholder="1"
+                        value="1"> +
+                    <input id="pag_to_cross_2" type="number" class="input topcoat-text-input shortinput" placeholder="2"
+                        value="2">
+
+                    <button id="auto_cross" class="topcoat-button reg_btn">Crossover</button>
+
+                </div>-->
+
+            </div>
+        </div>
+
+        <!--<div class="section">
+            <h6 class="title">Utils:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput baseline">
+                    <p class="label"></p>
+                    <div class="btns">
+                        <div>
+                            <span class="note">Style</span>
+                            <button jsx="initSwatches()" class="topcoat-button">Reset Colors</button>
+                            <button jsx="deleteUnusedSwatchesAndGroups()" class="topcoat-button">Delete Unused
+                                Colors</button>
+                        </div>
+                        <div>
+                            <span class="note">Layout</span>
+                            <button jsx="adjustSelectionToGrid()" class="topcoat-button">Move Selection to Grid</button>
+                            <button jsx="adjustSelectionToGrid(true)" class="topcoat-button">Move/Scale Selection to Grid</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>-->
+
+        <div class="section">
+            <h6 class="title">Manual Variation:<br><i>Feel free to keep clicking!</i></h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Document methods:
+                        <span class="note">
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="docMethods">
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Page methods:
+                        <span class="note">
+                            Go to the page<br>to co-design
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="pageMethods">
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Item methods:
+                        <span class="note">
+                            Select items<br>to co-design
+                        </span>
+                    </p>
+                    <div class="btns_list" mthtype="pageItemMethods">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+    </div>
+
+    <div id="log">
+        <h6 class="title">Live Feedback:</h6>
+        <div id="logtxt">
+            <div id='pastLog'></div>
+            <div id='newLog'>
+                Here I will text you some feedback on what I'm doing! ;)
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown"></div>
+
+    <div id="loader">
+        <span>Just a sec...</span>
+    </div>
+
+    <script src="../js/libs/seedrandom.js"></script>
+    <script>
+        Math.seedrandom("d18")
+    </script>
+
+    <script src="../js/libs/jquery-2.0.2.min.js"></script>
+    <script src="../js/libs/themeManager.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>
+    <script src="../js/libs/CSInterface.js"></script>
+    <script src="../js/userInterface.js"></script>
+    <script src="playground.js"></script>
+
+</body>
+
+</html>

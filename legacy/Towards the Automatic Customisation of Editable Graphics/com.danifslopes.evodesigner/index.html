@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/topcoat-desktop-dark.min.css" />
+    <link id="hostStyle" rel="stylesheet" href="css/styles.css" />
+    <title>EvoDesigner</title>
+    <script>
+        /* This script uses cep_node to start the Node.js server located at '/server/main.js' */
+        var localServer = cep_node.require(__dirname + '/server/main.js')();
+    </script>
+
+</head>
+
+<body class="hostElt">
+
+    <div id="content">
+
+        <div class="section">
+            <h6 class="title">Population:</h6>
+            <div class="sectioncont">
+                <div class="labelinput">
+                    <p class="label">Initial population: </p>
+                    <input id="selected_basePages_str" type="text" class="input topcoat-text-input"
+                        placeholder="ex: 1-5, 7 (others may be created until pop. size)" value=""><br>
+                </div>
+                <div class="labelinput">
+                    <p class="label">Population size: </p>
+                    <input id="pop_size" type="number" class="input topcoat-text-input shortinput" placeholder="10"
+                        value="10">
+                    <p class="note"><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Conceptual rules:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Keywords: </p>
+                    <input id="keywords" type="text" class="topcoat-text-input input"><br>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Mandatory tools: </p>
+                    <input id="mandatory_tools" type="text" class="topcoat-text-input input"><br>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Desirable tools: </p>
+                    <input id="desirable_tools" type="text" class="topcoat-text-input input"><br>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Mand. elements: </p>
+                    <input id="mand_elms" type="text" class="topcoat-text-input input"><br>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Hierarchy:</p>
+
+                    <div id="hierarchy" class="inputlist">
+                        <div class="inputlistcont">
+
+                            <div class="inputlistitem">
+                                <p class="sublabel">1º</p>
+                                <input type="text" class="topcoat-text-input input"
+                                    placeholder="Click here, then select page elements">
+                                <button class="addremove removeLevel hide">-</button> <br>
+                            </div>
+                            <div class="inputlistitem">
+                                <p class="sublabel">2º</p>
+                                <input type="text" class="topcoat-text-input input"
+                                    placeholder="Click here, then select page elements">
+                                <button class="addremove removeLevel">-</button><br>
+                            </div>
+
+                        </div>
+
+                        <p class="sublabel"></p>
+                        <button class="addremove addLevel">+</button>
+                        <label class="note addLevel">Add another level</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Evaluation rules:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <div class="label"></div>
+                    <p class="note">Level of importance:</p>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <input id="noveltyOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>
+                        <p class="sliderlabel">Novelty</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="noveltyValueRange" type="range" class="inputcomboslider topcoat-range" min="0" max="100" step="5">
+                        <input id="noveltyValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <input id="balanceOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>
+                        <p class="sliderlabel">Balance</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="balanceValueRange" type="range" class="inputcomboslider topcoat-range" min="0" max="100" step="5">
+                        <input id="balanceValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <input id="legibilityOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>
+                        <p class="sliderlabel">Legibility</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="legibilityValueRange" type="range" class="inputcomboslider topcoat-range" min="0" max="100" step="5">
+                        <input id="legibilityValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <div class="labelcombo label">
+                        <input id="styleOn" type="checkbox">
+                        <div class="topcoat-checkbox__checkmark"></div>
+                        <p class="sliderlabel">Style</p>
+                    </div>
+
+                    <div class="inputcombo">
+                        <input id="styleValueRange" type="range" class="inputcomboslider topcoat-range" min="0" max="100" step="5">
+                        <input id="styleValue" type="number" min="0" max="100" step="5" value="50"
+                            class="topcoat-text-input input sliderPerc">
+                        <p>&nbsp;%</p>
+                    </div>
+                </div>
+
+                <div class="labelinput">
+                    <p class="label">Style classifier: </p>
+                    <input id="style_classifier" type="text" class="topcoat-text-input input"
+                        value="evodesigner.com/style/mystyle"><br>
+                    <p id="search_classifier" class="note"><a href="#">Find one</a></p>
+                </div>
+
+                <!--<div class="labelinput">
+                    <p class="label">Style classifier:</p>
+
+                    <select type="text" class="topcoat-text-input input">
+                        <option>evodesigner.com/style/mystyle</option>
+                    </select>
+                </div>-->
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h6 class="title">Generation:</h6>
+            <div class="sectioncont">
+
+                <div class="labelinput">
+                    <p class="label">Nº. generations: </p>
+                    <input id="max_num_gens" type="number" value="10" class="topcoat-text-input input shortinput"><br>
+                </div>
+
+
+                <button id="generatebtn" class="topcoat-button gobtn">Generate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/libs/seedrandom.js"></script>
+    <script>Math.seedrandom("d18")</script>
+
+    <script src="js/libs/jquery-2.0.2.min.js"></script>
+    <script src="js/libs/themeManager.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.slim.js"></script>
+    <script src="js/libs/CSInterface.js"></script>
+<!--
+    <script src="js/mutation/properties.js"></script>
+    <script src="js/mutation/methods.js"></script>-->
+    <script src="js/userInterface.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
